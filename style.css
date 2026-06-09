@@ -1,0 +1,66 @@
+body{
+    background-color: #F4F4F4;
+    margin-top:0px;
+}
+
+header {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-between;
+    background-color:aquamarine;
+}
+
+header h1 {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.Jumps {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:40px;
+}
+
+#starter {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+}
+
+#intro {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+#headerProject {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#journey h3 {
+    display: flex;
+    justify-content: center;
+}
+
+#about h3 {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#backstory {
+    margin-top:0px;
+}
+
+#storytext {
+    display: flex;
+    justify-content: start;
+    justify-content: space-evenly;
+
+}
