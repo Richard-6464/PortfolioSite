@@ -1,66 +1,323 @@
-body{
-    background-color: #F4F4F4;
-    margin-top:0px;
+/* --- Global Styles --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+body {
+    background-color: #F8F9FA; 
+    margin: 0;
+    font-family: sans-serif;
+    color: #2C3E50;
+}
+
+/* Base structural wrapper container centered using explicit percent positioning */
+.wrapper {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 20px;
+}
+
+/* --- Navigation & Header --- */
 header {
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    justify-content: space-between;
-    background-color:aquamarine;
+    background-color: #2C3E50; 
+    color: white;
+    padding: 20px;
 }
 
 header h1 {
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
+    text-align: center;
+    margin-bottom: 15px;
 }
 
 .Jumps {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap:40px;
 }
 
+.Jumps a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.Jumps a:hover {
+    color: #3498db;
+}
+
+/* --- Section Layout Baselines --- */
+section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-left: 4px solid #3498db;
+    padding-left: 10px;
+}
+
+/* --- Section 1: Intro / Home --- */
 #starter {
     display: flex;
     flex-direction: row;
-    text-align: center;
+    justify-content: center;
     align-items: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+#portrait {
+    border-radius: 8px; 
+    margin-right: 40px; /* Replaced gap property with standard layout margin */
 }
 
 #intro {
+    width: 50%;
     display: flex;
     flex-direction: column;
+}
+
+#intro p {
+    line-height: 1.6;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* --- Side-by-Side Flex Layout Row Structure --- */
+#backstory, .splitRow {
+    display: flex;
+    flex-direction: row;
+}
+
+/* The left side main body card takes up 65% of the total available row space */
+#storytext, .infoCardLeft {
+    width: 65%;
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    line-height: 1.6; 
+    margin-right: 25px; /* Creates spacing between left block and right block */
+}
+
+/* The right side sidebar card column takes up 35% of the row space */
+.sidebarImages, .infoCardRight {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+.logoBox, .captionedImageBox {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 20px; /* Space between items stacked inside the sidebar */
+}
+
+.aboutPic {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+
+.imageCaption {
+    font-size: 14px;
+    color: #555555;
+    margin-top: 8px; 
+    text-align: center;
+    font-style: italic;
+}
+
+/* --- Skills Tags Component Blocks --- */
+.infoCardLeft h4, .infoCardRight h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #2C3E50;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 8px;
+}
+
+.skillsGrid {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding:0px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+    gap:8px;
+}
+
+.skillTag {
+    background-color: #ecf0f1;
+    color: #2C3E50;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid #dcdde1;
+    margin-right: 8px;
+}
+
+/* --- Milestones Rows --- */
+.milestoneBlock {
+    margin-bottom: 20px;
+}
+
+.milestoneBlock h5 {
+    font-size: 15px;
+    color: #3498db;
+    margin-bottom: 5px;
+}
+
+.milestoneBlock p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* --- Projects Row Layout --- */
+.projectsContainer {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding:0px;
+}
+
+.projectCard {
+    width: 50%; /* Give both cards an exact half share of the screen */
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.projectImage {
+    background-color: #e2e8f0;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+    color: #64748b;
+    font-size: 13px;
+    font-weight: bold;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.projectContent {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.projectContent h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.projectContent p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.projectLink {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* --- Placeholder boxes --- */
+.spareTime {
+    background-color: #f1f2f6;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 13px;
+}
+.spareTime img {
+    width:90%;
+
+}
+
+/* --- Contact & Call To Action Panel --- */
+.contactBox {
+    font-style: normal;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+}
+
+.contactBox h3 {
+    border-left: none;
+    padding-left: 0;
+    text-align: center;
+}
+
+.contactBox p {
+    margin-bottom: 25px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.actionButtonsRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.actionBtn {
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 15px;
     margin-left: 10px;
+    margin-right: 10px;
 }
 
-#headerProject {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.emailBtn {
+    background-color: #2C3E50;
+    color: white;
 }
 
-#journey h3 {
-    display: flex;
-    justify-content: center;
+.resumeBtn {
+    background-color: #3498db;
+    color: white;
 }
 
-#about h3 {
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
+.socialLinksContainer a {
+    color: #7f8c8d;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
-#backstory {
-    margin-top:0px;
+.socialLinksContainer a:hover {
+    color: #3498db;
 }
 
-#storytext {
-    display: flex;
-    justify-content: start;
-    justify-content: space-evenly;
-
+.logoBox ul {
+    list-style-type: square;
+    line-height: 1.6;
 }
+
